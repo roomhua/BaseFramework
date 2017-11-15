@@ -32,12 +32,10 @@ public abstract class BaseActivity<T extends BasePresenter> extends SimpleActivi
 
     @Override
     protected void onDestroy() {
-        super.onDestroy();
-
-
         if (mPresenter != null) {
             mPresenter.detachView();
         }
+        super.onDestroy();
     }
 
     @Override

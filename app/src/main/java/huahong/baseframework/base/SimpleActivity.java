@@ -50,12 +50,14 @@ public abstract class SimpleActivity extends AppCompatActivity implements View.O
 
     @Override
     protected void onDestroy() {
-        super.onDestroy();
+
 
         if (mUnbinder != null) {
             mUnbinder.unbind();
         }
         AppManager.getAppManager().removeActivity(this);
+
+        super.onDestroy();
     }
 
 

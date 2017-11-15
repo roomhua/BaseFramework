@@ -68,11 +68,13 @@ public abstract class SimpleFragment extends Fragment implements View.OnClickLis
 
     @Override
     public void onDestroyView() {
-        super.onDestroyView();
+
 
         if (mUnbinder != null) {
             mUnbinder.unbind();
         }
+
+        super.onDestroyView();
     }
 
     /***
